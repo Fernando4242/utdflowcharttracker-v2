@@ -1,0 +1,39 @@
+<nav class="py-6 rounded border-b-2 bg-gray-900 w-full">
+  <div class="w-full flex md:flex-row flex-col gap-4 md:gap-0">
+    <div class="text-white text-center self-center w-full lg:flex lg:mr-auto lg:w-80">
+      <a href="/" class="no-underline lg:self-center">
+        <span class="text-4xl font-semibold whitespace-nowrap text-white">
+          UTD Flowchart Tracker
+        </span>
+      </a>
+    </div>
+
+    <div class="w-full flex mx-auto justify-center self-center gap-4">
+      <a href="/" class="p-4 text-white no-underline block hover:border-white hover:border-b-2">Home</a>
+      <a href="/flowchart" class="p-4 text-white no-underline block hover:border-white hover:border-b-2">Flowchart</a>
+    </div>
+
+    <div class="text-white flex gap-2 justify-center lg:justify-end w-full lg:ml-auto lg:w-96">
+      {{#if user}}
+      <p class="self-center">Welcome, {{user.firstName}}!</p>
+      <div id="" class="dropdown w-16 border-2 bg-blue-600 border-black rounded-full">
+        <div>
+          <img src="/profile-icons/{{user.profile_icon}}" class="object-cover" />
+        </div>
+        <div class="dropdown-content">
+          <a class="p-4 text-white no-underline block bg-blue-600 hover:border-2 border-blue-900"
+            href="/account/settings">⚙️ Settings</a>
+          <a class="p-4 text-white no-underline block bg-blue-600 hover:border-2 border-blue-900"
+            href="/auth/sign-out">👋 Sign out</a>
+          {{!-- <a class="p-4 text-white no-underline block bg-blue-600 hover:border-2 border-blue-900">❔Help</a> --}}
+        </div>
+      </div>
+      {{else}}
+        <a href="/auth/sign-in"
+                class="p-3 mt-2 bg-blue-600 rounded-md text-center text-white w-44 no-underline block">
+                Sign in
+        </a>
+      {{/if}}
+    </div>
+  </div>
+</nav>

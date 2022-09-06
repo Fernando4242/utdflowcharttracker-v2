@@ -1,0 +1,42 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "firebase": "^9.8.4",
+    "firebase-admin": "^11.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.7.0",
+    "mongoose": "^6.5.2",
+    "nodemailer": "^6.7.8",
+    "nodemon": "^2.0.18"
+  },
+  "name": "utdflowchart-tracker-express-mongodb",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.4",
+    "tailwindcss": "^3.1.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind": "npx tailwindcss -i public/main.css -o public/output.css --watch",
+    "dev": "nodemon app",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fernando4242/utdflowchart-tracker-express-mongodb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fernando4242/utdflowchart-tracker-express-mongodb/issues"
+  },
+  "homepage": "https://github.com/Fernando4242/utdflowchart-tracker-express-mongodb#readme",
+  "description": ""
+}

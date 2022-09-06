@@ -1,0 +1,50 @@
+<div class="overflow-y-auto max-h-80 my-2 w-full">
+  <table class="w-full text-sm text-left  text-gray-400">
+    <caption class="p-5 text-lg font-semibold bg-white bg-gray-800">
+      {{headline}}
+    </caption>
+    <thead
+      class="border-b sticky top-0 text-xs uppercase bg-gray-700 text-gray-400"
+    >
+      <tr>
+        <th scope="col" class="py-3 px-6">
+          Course No
+        </th>
+        <th scope="col" class="py-3 px-6">
+          Description
+        </th>
+        <th scope="col" class="py-3 px-6">
+          Credit Hours
+        </th>
+      </tr>
+    </thead>
+    <tbody id={{id}}>
+      {{#each data}}
+        <tr
+          class="border-b bg-gray-800 border-gray-700 text-clip"
+        >
+          <th
+            scope="row"
+            class="py-4 px-6 font-medium whitespace-nowrap text-white"
+          >
+            {{this.information.course_name}}
+          </th>
+          <td class="py-4 px-6">
+            {{this.information.course_description}}
+          </td>
+          <td class="py-4 px-6 text-end">
+            {{this.information.credit_hours}}
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+<table class="w-full text-sm text-left text-gray-400">
+  <tfoot>
+    <tr class="font-semibold bg-gray-800">
+      <th scope="row" class="py-3 px-6 text-base">Total Credit Hours:</th>
+      <td class="py-3 px-6 text-end">{{totalCreditHours}}</td>
+    </tr>
+  </tfoot>
+</table>

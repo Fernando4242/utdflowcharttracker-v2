@@ -1,0 +1,46 @@
+<div class="grid grid-cols-5 mt-14 gap-12 w-full">
+    <div class="lg:col-span-2 col-span-5 h-min">
+        <div class="w-full grid grid-cols-2 gap-10">
+            <div class="w-full col-span-2 md:col-span-1 lg:col-span-2">
+                {{> course-table headline="Classes Taken" id="classes-taken-table" data=takenCourses
+                totalCreditHours=totalCreditHours.taken}}
+            </div>
+            <div class="w-full col-span-2 md:col-span-1 lg:col-span-2">
+                {{> course-table headline="Currently Taking" id="currently-taken-table" data=currentlyCourses
+                totalCreditHours=totalCreditHours.currently}}
+            </div>
+            <div class="w-full col-span-2 md:col-span-2 lg:col-span-2">
+                {{> course-table headline="Planning To Take" id="planning-to-take-table" data=planningCourses
+                totalCreditHours=totalCreditHours.planning}}
+            </div>
+        </div>
+    </div>
+    <div class="lg:col-span-3 col-span-5">
+        <div class="inline-flex rounded-md shadow-sm gap-3 mb-5 flex-wrap" role="group">
+            <button type="button" id="taken"
+                class="status-button py-3 px-5 text-sm font-medium  border-t rounded-lg border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 bg-gray-700 border-gray-600 text-white hover:text-white hover:bg-gray-600 focus:ring-blue-500 focus:text-white">
+                Taken
+            </button>
+            <button type="button" id="currently"
+                class="status-button py-3 px-5 text-sm font-medium  border-t rounded-lg border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 bg-gray-700 border-gray-600 text-white hover:text-white hover:bg-gray-600 focus:ring-blue-500 focus:text-white">
+                Currently
+            </button>
+            <button type="button" id="planning"
+                class="status-button py-3 px-5 text-sm font-medium   rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 bg-gray-700 border-gray-600 text-white hover:text-white hover:bg-gray-600 focus:ring-blue-500 focus:text-white">
+                Planning
+            </button>
+            <button type="button" id="save"
+                class="py-3 px-5 text-sm font-medium  bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 bg-blue-700 border-gray-600 text-white hover:text-white hover:bg-blue-600 focus:ring-blue-500 focus:text-white">
+                Save
+            </button>
+        </div>
+        <div class="svg-container">
+            {{#isEqual user.major "Computer Engineering"}}
+                {{> ce-flowchart}}
+            {{/isEqual}}
+            {{#isEqual user.major "Computer Science"}}
+                {{> cs-flowchart}}
+            {{/isEqual}}
+        </div>
+    </div>
+</div>
