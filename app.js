@@ -57,10 +57,11 @@ mongoUtil.connectToServer((err) => {
   // page routes
   app.use("/account", isAuthenticated, require("./routes/account.router"));
   app.use("/flowchart", isAuthenticated, require("./routes/flowchart.router"));
-  app.get("/", (req, res) => {
-    res.render("./pages/home", {user: req.session.user})
-  });
 })
+
+app.get("/", (req, res) => {
+  res.render("./pages/home", {user: req.session.user})
+});
 
 app.listen(process.env.PORT || port, () => {
   console.log("Listening on port: " + port);
