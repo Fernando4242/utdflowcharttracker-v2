@@ -2,6 +2,7 @@
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cookie-parser": "^1.4.6",
+    "cypress": "^10.8.0",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "express-handlebars": "^6.0.6",
@@ -25,7 +26,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "tailwind": "npx tailwindcss -i public/main.css -o public/output.css --watch",
     "dev": "nodemon app",
-    "start": "node app"
+    "start": "node app",
+    "e2e" : "cypress open"
   },
   "repository": {
     "type": "git",
