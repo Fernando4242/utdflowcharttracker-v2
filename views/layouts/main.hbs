@@ -1,20 +1,45 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width={device-width}, initial-scale=1.0" />
-    <link rel="icon" href="/icons/icons8-flowchart-64.png">
-    <title>UTD Fowchart Tracker</title>
-    {{! <script src="https://cdn.tailwindcss.com"></script> }}
-    <link href="/output.css" type="text/css" rel="stylesheet" />
-  </head>
-  <body class="bg-gray-900">
-    <div class="mx-24 py-4"> 
-      {{> navbar}}
-      {{{body}}}
-      {{> footer}}
-    </div>
-    {{!-- <script src="/real-main.js"></script> --}}
-    <script src="/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width={device-width}, initial-scale=1.0" />
+  <!-- Primary Meta Tags -->
+  <title>UTD Flowchart Tracker</title>
+  <meta name="title" content="UTD Flowchart Tracker">
+  <meta name="description"
+    content="With UTD Flowchart Tracker you can keep track of the course you have taken, currently are, and plan to take in the next semester. Courses are based on the flowchart specific to your degree.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://utdlfowcharttracker.uc.r.appspot.com/">
+  <meta property="og:title" content="UTD Flowchart Tracker">
+  <meta property="og:description"
+    content="With UTD Flowchart Tracker you can keep track of the course you have taken, currently are, and plan to take in the next semester. Courses are based on the flowchart specific to your degree.">
+  <meta property="og:image" content="">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://utdlfowcharttracker.uc.r.appspot.com/">
+  <meta property="twitter:title" content="UTD Flowchart Tracker">
+  <meta property="twitter:description"
+    content="With UTD Flowchart Tracker you can keep track of the course you have taken, currently are, and plan to take in the next semester. Courses are based on the flowchart specific to your degree.">
+  <meta property="twitter:image" content="">
+  <link rel="icon" href="/icons/icons8-flowchart-64.png">
+  {{!
+  <script src="https://cdn.tailwindcss.com"></script> }}
+  <link href="/output.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-900">
+  <div class="mx-24 py-4">
+    {{> navbar}}
+    {{{body}}}
+    {{> footer}}
+  </div>
+  {{!--
+  <script src="/real-main.js"></script> --}}
+  <script src="/main.js"></script>
+</body>
+
 </html>
