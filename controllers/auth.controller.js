@@ -12,13 +12,13 @@ const profile = require("../configs/profile.icons");
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-        user: "fernandojport.supp@gmail.com",
+        user: "fernando.jport.dev@gmail.com",
         pass: process.env.SUPPORT_EMAIL_PASS,
     },
 });
 
 var mailOptions = {
-    from: "fernandojport.supp@gmail.com",
+    from: "fernando.jport.dev@gmail.com",
     to: "",
     subject: "Please verify your email for UTD Flowchart Tracker",
     text: "",
