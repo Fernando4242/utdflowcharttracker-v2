@@ -115,7 +115,6 @@ exports.getSimplifiedFlowchartData = async (req, res) => {
   if(data.length == 0){
     data.courses = [];
   }
-
   res.status(200).json(data.courses);
 };
 

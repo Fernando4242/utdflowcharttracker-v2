@@ -26,10 +26,12 @@ document.addEventListener("DOMContentLoaded", async (e) => {
     if (courses) {
       courseArr.forEach((course) => {
         let current = document.querySelector(`[data-course="${course.fromCoursebookId}"]`)
-        current = current.querySelector(".fill");
+        if(current != null){
+          current = current.querySelector(".fill");
 
-        current.classList = "fill";
-        current.classList.add(course.status);
+          current.classList = "fill";
+          current.classList.add(course.status);
+        }
       })
     }
   }
