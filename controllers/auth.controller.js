@@ -12,7 +12,7 @@ const profile = require("../configs/profile.icons");
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-        user: "fernando.jport.dev@gmail.com",
+        user: "fernando.jport@gmail.com",
         pass: process.env.SUPPORT_EMAIL_PASS,
     },
 });
